@@ -4,6 +4,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
 
-  scope :get_all_recent_nerds, -> { order('created_at DESC').limit(4) }
+  scope :get_all_recent_nerds, -> { order('created_at DESC').limit(15) }
 
 end
