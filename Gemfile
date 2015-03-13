@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.3'
 gem "paperclip", "~> 4.2"
 gem 'devise'
+gem 'thin'
 
 group :development, :test do  
   gem 'byebug'
@@ -22,6 +23,8 @@ group :development, :test do
   gem 'spring'
 
   gem 'sqlite3'
+
+  gem 'foreman'
 end
 
 group :production do
