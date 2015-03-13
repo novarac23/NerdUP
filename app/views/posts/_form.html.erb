@@ -1,0 +1,19 @@
+<%= form_for @post, :html => { :multipart => true } do |post| %>
+  <div class="form-group">
+    <%= post.label :name %>
+    <%= post.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= post.label :description %>
+    <%= post.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= post.label :nerd %>
+    <%= post.file_field :nerd, class: 'form-control' %>
+  </div>
+
+  <div class="form-group well">
+    <%= post.submit %>
+  </div>
+<% end %>

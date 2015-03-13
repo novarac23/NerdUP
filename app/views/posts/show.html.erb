@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3 text-center"><h1>Show a nerd</h1></div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3 text-center">
+    <div class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @post.name %></h3>
+      </div>
+      <div class="panel-body">
+        <p><%= image_tag @post.nerd.url(:medium), class: 'img-responsive center-block' %></p>
+        <p><%= @post.description %></p>
+        <% if owned(@post) %>
+        <p><%= link_to "Edit", edit_post_path(@post) %> | <%= link_to "Delete", @post, method: :delete, data: {confirm: 'Delete this NerdUp? :('} %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3 text-center well">
+    <p class="btn btn-primary">
+      <%= link_to "All NerdUps", root_path %>
+    </p>
+  </div>
+</div>
