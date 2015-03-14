@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem "paperclip", "~> 4.2"
 gem 'devise'
 gem 'thin'
+gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 group :development, :test do  
   gem 'byebug'

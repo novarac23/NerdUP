@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def owned(post)
     user_signed_in? && current_user.id == post.user_id
   end
