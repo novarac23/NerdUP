@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.all.get_all_recent_nerds.paginate(page: params[:page], per_page: 2)
+    @posts = Post.all.get_all_recent_nerds.paginate(page: params[:page], per_page: 8)
 	end
 
   def show
