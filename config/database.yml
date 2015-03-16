@@ -24,5 +24,9 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: novarac23
+  username: adminfyegyut
+  password: sl9QcXkAVTk8
 
