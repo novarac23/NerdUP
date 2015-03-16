@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	
-  before_action :find_a_nerd, only: [:edit, :destroy, :update, :show]
+  before_action :find_a_nerd, only: [:edit, :destroy, :update, :show, :upvote]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -48,6 +48,12 @@ class PostsController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def upvote
+    @post.liked_by current_user
+
+    redirect_to :back
   end
 
   private    

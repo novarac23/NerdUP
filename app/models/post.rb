@@ -8,4 +8,5 @@ class Post < ActiveRecord::Base
 
   scope :get_all_recent_nerds, -> { order('created_at DESC') }
 
+  acts_as_votable
 end

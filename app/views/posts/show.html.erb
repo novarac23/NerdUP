@@ -14,9 +14,9 @@
         <% if owned(@post) %>
         <p><%= link_to "Edit", edit_post_path(@post) %> | <%= link_to "Delete", @post, method: :delete, data: {confirm: 'Delete this NerdUp? :('} %> </p>
         <% end %>
-        <p>
-          <button class="btn btn-danger "><span class="glyphicon glyphicon-fire"></span> Fire me up!</button>
-        </p>
+          <p class="btn btn-danger "><span class="glyphicon glyphicon-fire"> <%= link_to 'Fire_up!', like_post_path(@post), method: :put %></span></p>
+        <p>Current popularity: <%= @post.votes_for.size %></p>
+        <p>Published by: <b><%= @post.user.email %></b></p>
       </div>
     </div>
   </div>
