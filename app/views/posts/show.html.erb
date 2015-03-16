@@ -14,6 +14,9 @@
         <% if owned(@post) %>
         <p><%= link_to "Edit", edit_post_path(@post) %> | <%= link_to "Delete", @post, method: :delete, data: {confirm: 'Delete this NerdUp? :('} %> </p>
         <% end %>
+        <p>
+          <button class="btn btn-danger "><span class="glyphicon glyphicon-fire"></span> Fire me up!</button>
+        </p>
       </div>
     </div>
   </div>
