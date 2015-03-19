@@ -31,7 +31,12 @@
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3 text-center">
     <% @comments.each do |comment| %>
+      <div class="col-xs-12 well">
       <%= comment.content %>
+      <span>by
+      <%= comment.user.email %>
+      </span>
+      </div>
     <% end %>
   </div>
 </div>
