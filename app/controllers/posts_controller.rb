@@ -8,6 +8,8 @@ class PostsController < ApplicationController
 	end
 
   def show
+    #@new_comment = @post.comment.build
+    @comments=Comment.where(post_id: @post)
     @post
   end
 

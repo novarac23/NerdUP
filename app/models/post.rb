@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   validates_with AttachmentSizeValidator, :attributes => :nerd, :less_than => 1.megabytes
 
   belongs_to :user
+  has_many :comments
 
   scope :get_all_recent_nerds, -> { order('created_at DESC') }
 
